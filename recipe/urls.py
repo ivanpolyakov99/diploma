@@ -1,7 +1,10 @@
-from django.conf.urls import url
+from django.urls import path
 
-from . import views
+from recipe.views import index, SignupView, recipe_details, UserRecipeView
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    path('', index, name='index'),
+    path('details/<int:id>', recipe_details, name='details'),
+    path('add-recipe/<int:id>', UserRecipeView.as_view(), name='add_recipe'),
+    path('signup', SignupView.as_view(), name='signup')
 ]

@@ -1,0 +1,32 @@
+{% load static %}
+{% load tags %}
+<html>
+<head>
+    <title>
+        {%  block title %}
+            Index
+        {% endblock title %}
+    </title>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>#</td>
+            <td>Name</td>
+            <td>Level</td>
+            <td>Cooktime</td>
+            <td>Time</td>
+        </tr>
+        <tr></tr>
+        {% for recipe in recipes %}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ recipe.name_text }}</td>
+                <td>{{ recipe.level }}</td>
+                <td>{{ recipe.cooktime }}</td>
+                <td>{{ recipe.text }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

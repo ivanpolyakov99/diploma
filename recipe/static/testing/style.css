@@ -1,0 +1,28 @@
+body {
+    background-color: #00fb02;
+    color: red;
+}
+.color1 {
+    background-color: #00fb02;
+}
+.color2 {
+    background-color: yellow;
+}
+
+a {
+    color: darkgreen;
+}
+a:hover {
+    color: coral;
+}
+
+tr {
+
+}
+
+.first-column {
+    background-color: #feff24;
+}
+.img {
+    width: 200px;
+}
