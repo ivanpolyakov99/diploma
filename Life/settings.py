@@ -79,10 +79,10 @@ WSGI_APPLICATION = 'Life.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
+        'NAME': os.getenv('DB_NAME'),
         'HOST': 'localhost',
         'PORT': '5432',
-        'USER': 'postgres',
+        'USER': os.getenv('DB_USER'),
         'PASSWORD': os.getenv('DB_PASSWORD')
     }
 }
